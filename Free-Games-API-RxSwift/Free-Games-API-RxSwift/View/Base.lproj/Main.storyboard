@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Free_Games_API_RxSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cQy-9g-fsQ">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5hl-nj-SH5">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="759"/>
+                                        <subviews>
+                                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="m3o-s9-i1F">
+                                                <rect key="frame" x="0.0" y="0.0" width="393" height="56"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="BYZ-38-t0r" id="g9l-Wz-Ou8"/>
+                                                </connections>
+                                            </searchBar>
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="mHH-F5-yjy">
+                                                <rect key="frame" x="0.0" y="56" width="393" height="703"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <prototypes>
+                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="GameTableViewCell" id="22Q-R6-mhk" customClass="GameTableViewCell" customModule="Free_Games_API_RxSwift" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="22Q-R6-mhk" id="nfl-Gk-viQ">
+                                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                        </tableViewCellContentView>
+                                                    </tableViewCell>
+                                                </prototypes>
+                                            </tableView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="m3o-s9-i1F" secondAttribute="trailing" id="3fx-Wi-VrE"/>
+                                            <constraint firstAttribute="trailing" secondItem="mHH-F5-yjy" secondAttribute="trailing" id="7tG-GT-vqX"/>
+                                            <constraint firstItem="mHH-F5-yjy" firstAttribute="top" secondItem="m3o-s9-i1F" secondAttribute="bottom" id="EpY-Ba-KfA"/>
+                                            <constraint firstItem="m3o-s9-i1F" firstAttribute="leading" secondItem="5hl-nj-SH5" secondAttribute="leading" id="WrI-7M-Jpj"/>
+                                            <constraint firstItem="m3o-s9-i1F" firstAttribute="top" secondItem="5hl-nj-SH5" secondAttribute="top" id="a60-KD-VKB"/>
+                                            <constraint firstAttribute="bottom" secondItem="mHH-F5-yjy" secondAttribute="bottom" id="buL-la-J7e"/>
+                                            <constraint firstItem="mHH-F5-yjy" firstAttribute="leading" secondItem="5hl-nj-SH5" secondAttribute="leading" id="tVX-Zo-2ly"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="5hl-nj-SH5" secondAttribute="trailing" id="8fc-DA-oep"/>
+                                    <constraint firstItem="5hl-nj-SH5" firstAttribute="leading" secondItem="cQy-9g-fsQ" secondAttribute="leading" id="BYe-HX-G3F"/>
+                                    <constraint firstItem="5hl-nj-SH5" firstAttribute="width" secondItem="cQy-9g-fsQ" secondAttribute="width" id="OO4-jz-Xy4"/>
+                                    <constraint firstItem="5hl-nj-SH5" firstAttribute="top" secondItem="cQy-9g-fsQ" secondAttribute="top" id="Oa0-zo-dGu"/>
+                                    <constraint firstItem="5hl-nj-SH5" firstAttribute="height" secondItem="cQy-9g-fsQ" secondAttribute="height" priority="250" id="nCw-P3-smx"/>
+                                    <constraint firstAttribute="bottom" secondItem="5hl-nj-SH5" secondAttribute="bottom" id="srT-Jv-sB1"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="7DC-zR-5vI"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="haC-d1-PHt"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="cQy-9g-fsQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="JXB-kn-0yg"/>
+                            <constraint firstItem="cQy-9g-fsQ" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="biF-8U-mhT"/>
+                            <constraint firstItem="cQy-9g-fsQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="eJV-Xj-dt0"/>
+                            <constraint firstItem="cQy-9g-fsQ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="zvW-k0-69q"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="gamesTableView" destination="mHH-F5-yjy" id="tXp-kK-h6k"/>
+                        <outlet property="searchGamesBar" destination="m3o-s9-i1F" id="D39-NK-e4d"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="130.53435114503816" y="-34.507042253521128"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="GameTableViewCell" rowHeight="343" id="KGk-i7-Jjw" customClass="GameTableViewCell" customModule="Free_Games_API_RxSwift" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="498" height="343"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="498" height="343"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ele-70-0S3">
+                        <rect key="frame" x="0.0" y="0.0" width="498" height="202"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="202" id="1b7-dO-oc8"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Game Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IG9-xH-672">
+                        <rect key="frame" x="14" y="229" width="153.33333333333334" height="32.333333333333314"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="exq-Jz-iz9">
+                        <rect key="frame" x="368.66666666666669" y="252" width="59" height="30"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ReactiveExtensionsLogo" translatesAutoresizingMaskIntoConstraints="NO" id="Nf0-U7-zoO">
+                        <rect key="frame" x="444.66666666666669" y="252.00000000000003" width="33.333333333333314" height="33.333333333333343"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Describtion" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="to5-xL-8l5" customClass="MarqueeLabel" customModule="MarqueeLabel">
+                        <rect key="frame" x="14" y="302" width="400" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="400" id="9Bx-zi-8Ql"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="exq-Jz-iz9" firstAttribute="top" secondItem="ele-70-0S3" secondAttribute="bottom" constant="50" id="2nL-IA-Pp6"/>
+                    <constraint firstItem="to5-xL-8l5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="14" id="DKG-MR-mBm"/>
+                    <constraint firstItem="to5-xL-8l5" firstAttribute="top" secondItem="IG9-xH-672" secondAttribute="bottom" constant="40.670000000000002" id="FHG-V6-Qtk"/>
+                    <constraint firstItem="ele-70-0S3" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="KFI-nw-uD5"/>
+                    <constraint firstItem="Nf0-U7-zoO" firstAttribute="top" secondItem="ele-70-0S3" secondAttribute="bottom" constant="50" id="LFe-OD-XR9"/>
+                    <constraint firstItem="Nf0-U7-zoO" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="Lgj-1o-UzG"/>
+                    <constraint firstItem="ele-70-0S3" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="X37-db-39E"/>
+                    <constraint firstItem="ele-70-0S3" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="XPh-B8-IK1"/>
+                    <constraint firstItem="Nf0-U7-zoO" firstAttribute="leading" secondItem="exq-Jz-iz9" secondAttribute="trailing" constant="17" id="YNU-z7-ejh"/>
+                    <constraint firstItem="IG9-xH-672" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="14" id="aDv-il-8vb"/>
+                    <constraint firstItem="ele-70-0S3" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="al9-yg-pT1"/>
+                    <constraint firstAttribute="trailing" secondItem="ele-70-0S3" secondAttribute="trailing" id="jQ6-Zo-blz"/>
+                    <constraint firstItem="IG9-xH-672" firstAttribute="top" secondItem="ele-70-0S3" secondAttribute="bottom" constant="27" id="nxo-VR-n8C"/>
+                    <constraint firstAttribute="bottom" secondItem="to5-xL-8l5" secondAttribute="bottom" constant="17" id="w9o-Ny-CK8"/>
+                    <constraint firstAttribute="trailing" secondItem="ele-70-0S3" secondAttribute="trailing" id="zdG-1c-QT6"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="gameDescription" destination="to5-xL-8l5" id="9oI-RB-jcn"/>
+                <outlet property="gameImage" destination="ele-70-0S3" id="12r-HE-4aR"/>
+                <outlet property="gameNameLabel" destination="IG9-xH-672" id="ffl-bT-eHw"/>
+                <outlet property="platFormLabel" destination="exq-Jz-iz9" id="SWM-1x-Rqy"/>
+            </connections>
+            <point key="canvasLocation" x="198.47328244274809" y="-64.436619718309856"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ReactiveExtensionsLogo" width="33.333332061767578" height="33.333332061767578"/>
+    </resources>
+</document>
