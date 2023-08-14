@@ -46,7 +46,7 @@ class APIClient {
         self.apiProvider = apiProvider
     }
     
-    func fetchResourceData<T: Decodable>(resource: String? = nil, completion: @escaping (Result<T, Error>) -> Void) {
+    func fetchResourceData<T: Decodable>(model: T.Type, resource: String? = nil, completion: @escaping (Result<T, Error>) -> Void) {
         var resourceURL = baseURL
         if let resource = resource {
             resourceURL = baseURL.appendingPathComponent(resource)
@@ -56,7 +56,7 @@ class APIClient {
             switch result {
             case .success(let data):
                 do {
-                    let parsedData = try JSONDecoder().decode(T.self, from: data)
+                    let parsedData = try JSONDecoder().decode(model.self, from: data)
                     completion(.success(parsedData))
                 } catch {
                     completion(.failure(error))

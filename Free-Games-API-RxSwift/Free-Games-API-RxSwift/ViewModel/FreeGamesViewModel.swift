@@ -7,11 +7,20 @@
 
 import Foundation
 import RxSwift
+import RxRelay
 
 class FreeGamesViewModel {
+    
     private let provider = NetworkAPIProvider()
     
-    var games = BehaviorSubject(value: [Game]())
+    var games = BehaviorRelay<[Game]>(value: [])
+    var gameelnaggar = [Game]()
+    func filterGame(query: String) {
+        let gamesFilterArray = gameelnaggar.filter { game in
+            query.isEmpty || game.title.localizedCaseInsensitiveContains(query)
+        }
+        games.accept(gamesFilterArray)
+    }
     
     func fetchGames() {
         let baseURL = URL(string: "https://www.freetogame.com/api/games")
@@ -19,18 +28,21 @@ class FreeGamesViewModel {
             fatalError("Failed to create baseURL")
         }
         let apiHandler = APIClient(baseURL: apiURL, apiProvider: provider)
-        apiHandler.fetchResourceData { (result: Result<DecodedGames, Error>) in
+        //as is // zy ma elktab bykool by eng ahmed
+        apiHandler.fetchResourceData(model: [Game].self) { (result: Result<DecodedGames, Error>) in
             switch result {
             case .success(let data):
                 DispatchQueue.main.async {
-                    self.games.on(.next(data))
+                    //                    self.games.on(.next(data))
+                    self.games.accept(data)
+                    self.gameelnaggar = data
                 }
             case .failure(let error):
                 print("Slaah")
                 print(error)
             }
         }
-
+        
     }
-
+    
 }

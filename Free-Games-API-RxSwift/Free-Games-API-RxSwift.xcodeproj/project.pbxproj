@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB0ED8852A8AA5850063E87F /* ReactiveAPIHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0ED8842A8AA5850063E87F /* ReactiveAPIHandler.swift */; };
 		AB6B1F2A2A88055E00343B6D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6B1F292A88055E00343B6D /* AppDelegate.swift */; };
 		AB6B1F2C2A88055E00343B6D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6B1F2B2A88055E00343B6D /* SceneDelegate.swift */; };
 		AB6B1F2E2A88055E00343B6D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6B1F2D2A88055E00343B6D /* ViewController.swift */; };
@@ -28,6 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AB0ED8842A8AA5850063E87F /* ReactiveAPIHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactiveAPIHandler.swift; sourceTree = "<group>"; };
 		AB6B1F262A88055E00343B6D /* Free-Games-API-RxSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Free-Games-API-RxSwift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB6B1F292A88055E00343B6D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AB6B1F2B2A88055E00343B6D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 			children = (
 				AB6B1F422A88081C00343B6D /* APIHandler.swift */,
 				AB6B1F452A8808B500343B6D /* FreeGamesParser.swift */,
+				AB0ED8842A8AA5850063E87F /* ReactiveAPIHandler.swift */,
 			);
 			path = APIHandler;
 			sourceTree = "<group>";
@@ -229,6 +232,7 @@
 				AB6B1F2C2A88055E00343B6D /* SceneDelegate.swift in Sources */,
 				AB6B1F432A88081C00343B6D /* APIHandler.swift in Sources */,
 				AB6B1F462A8808B500343B6D /* FreeGamesParser.swift in Sources */,
+				AB0ED8852A8AA5850063E87F /* ReactiveAPIHandler.swift in Sources */,
 				AB6B1F4D2A88097C00343B6D /* GameTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
